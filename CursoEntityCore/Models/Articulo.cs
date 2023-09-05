@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CursoEntityCore.Models
@@ -17,6 +18,7 @@ namespace CursoEntityCore.Models
         public string Descripcion { get; set; }
 
         [Range (0.1, 5.0)]
+        [DisplayName("Calificación")]
         public double Calificacion { get; set; }
 
         [DataType(DataType.Date)]

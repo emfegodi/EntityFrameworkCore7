@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\CursoEntityCore.csproj": {}
+    "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\CursoEntityCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\CursoEntityCore.csproj": {
+    "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\CursoEntityCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\CursoEntityCore.csproj",
+        "projectUniqueName": "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\CursoEntityCore.csproj",
         "projectName": "CursoEntityCore",
-        "projectPath": "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\CursoEntityCore.csproj",
+        "projectPath": "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\CursoEntityCore.csproj",
         "packagesPath": "C:\\Users\\co_efgomezd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\obj\\",
+        "outputPath": "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

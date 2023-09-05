@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CursoEntityCore
 build_property.RootNamespace = CursoEntityCore
-build_property.ProjectDir = C:\Users\co_efgomezd\source\repos\CursoEntityCore\CursoEntityCore\
+build_property.ProjectDir = C:\Users\co_efgomezd\source\repos\EntityFrameworkCore7\CursoEntityCore\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\co_efgomezd\source\repos\CursoEntityCore\CursoEntityCore
+build_property.MSBuildProjectDirectory = C:\Users\co_efgomezd\source\repos\EntityFrameworkCore7\CursoEntityCore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Articulo/Crear.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Articulo/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9cQ3JlYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Articulo/Editar.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Articulo/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9cRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Articulo/Index.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Articulo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Categoria/Crear.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Categoria/Crear.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENyZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Categoria/Editar.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Categoria/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Categoria/Index.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Categoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Categoria/VistaCrearMultipleOpcionFormulario.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Categoria/VistaCrearMultipleOpcionFormulario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXFZpc3RhQ3JlYXJNdWx0aXBsZU9wY2lvbkZvcm11bGFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Home/Index.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Home/Privacy.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Shared/Error.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/_ViewImports.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/_ViewStart.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/co_efgomezd/source/repos/CursoEntityCore/CursoEntityCore/Views/Shared/_Layout.cshtml]
+[C:/Users/co_efgomezd/source/repos/EntityFrameworkCore7/CursoEntityCore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l01q1273i0

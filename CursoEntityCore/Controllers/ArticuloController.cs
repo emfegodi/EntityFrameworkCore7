@@ -1,6 +1,9 @@
 ﻿using CursoEntityCore.Datos;
 using CursoEntityCore.Models;
+using CursoEntityCore.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace CursoEntityCore.Controllers
 {
@@ -11,10 +14,24 @@ namespace CursoEntityCore.Controllers
         {
             _contexto = contexto;
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
-            //Consulta inicial con todos los datos
-            List<Articulo> listaArticulos = _contexto.Articulo.ToList();
+            //Opción 1 sin datos relacionados (solo trae ID de la categoria)
+            //List<Articulo> listaArticulos =  _contexto.Articulo.ToList();
+
+            //foreach (var articulo in listaArticulos)
+            //{
+                //Opción 2: Carga manual se genera muchas consultas SQL, no es eficiente si necesitamos cargar mas propiedades
+                //articulo.Categoria = _contexto.Categoria.FirstOrDefault(c => c.Categoria_Id == articulo.Categoria_Id);
+
+                //Opción 3: Carga explícita (Explicit loading)
+            //    _contexto.Entry(articulo).Reference(c => c.Categoria).Load();
+            //}
+
+            //Opción 4: Carga diligente (Eager Loading)
+            List<Articulo> listaArticulos = _contexto.Articulo.Include(c => c.Categoria).ToList();
 
             return View(listaArticulos);
         }
@@ -22,7 +39,14 @@ namespace CursoEntityCore.Controllers
         [HttpGet]
         public IActionResult Crear()
         {
-            return View();
+            ArticuloCategoriaVM articuloCategorias = new ArticuloCategoriaVM();
+            articuloCategorias.ListaCategorias = _contexto.Categoria.Select(i => new SelectListItem
+            {
+                Text = i.Nombre,
+                Value = i.Categoria_Id.ToString()
+            });
+
+            return View(articuloCategorias);
         }
 
         [HttpPost]
@@ -35,62 +59,16 @@ namespace CursoEntityCore.Controllers
                 _contexto.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
-            return View();
-        }
 
-        [HttpGet]
-        public IActionResult CrearMultipleOpcion2()
-        {
-            List<Articulo> Articulos = new List<Articulo>();
-            for (int i = 0; i < 2; i++)
+            //Para que al retornar la vista por alguno error se envíe la lista de categorias 
+            ArticuloCategoriaVM articuloCategorias = new ArticuloCategoriaVM();
+            articuloCategorias.ListaCategorias = _contexto.Categoria.Select(i => new SelectListItem
             {
-                //_contexto.Articulo.Add(new Articulo{Nombre = Guid.NewGuid().ToString(),});
-                Articulos.Add(new Articulo { TituloArticulo = Guid.NewGuid().ToString() });
-            }
-            _contexto.AddRange(Articulos);
-            _contexto.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
+                Text = i.Nombre,
+                Value = i.Categoria_Id.ToString()
+            });
 
-
-        [HttpGet]
-        public IActionResult CrearMultipleOpcion5()
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                _contexto.Articulo.Add(new Articulo
-                {
-                    TituloArticulo = Guid.NewGuid().ToString(),
-                });
-            }
-
-            _contexto.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
-
-        [HttpGet]
-        public IActionResult VistaCrearMultipleOpcionFormulario()
-        {
-            return View();
-
-        }
-
-        [HttpPost]
-        public IActionResult CrearMultipleOpcionFormulario()
-        {
-            string ArticulosForm = Request.Form["Nombre"];
-            var listaArticulos = from val in ArticulosForm.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries) select (val);
-
-            List<Articulo> Articulos = new List<Articulo>();
-
-            foreach (var Articulo in listaArticulos)
-            {
-                Articulos.Add(new Articulo { TituloArticulo = Articulo });
-            }
-            _contexto.Articulo.AddRange(Articulos);
-            _contexto.SaveChanges();
-            return RedirectToAction(nameof(Index));
-
+            return View(articuloCategorias);
         }
 
         [HttpGet]
@@ -101,28 +79,48 @@ namespace CursoEntityCore.Controllers
                 return View();
             }
 
-            var Articulo = _contexto.Articulo.FirstOrDefault(c => c.Articulo_Id == id);
-            return View(Articulo);
+            ArticuloCategoriaVM articuloCategorias = new ArticuloCategoriaVM();
+            articuloCategorias.ListaCategorias = _contexto.Categoria.Select(i => new SelectListItem
+            {
+                Text = i.Nombre,
+                Value = i.Categoria_Id.ToString()
+            });
+
+            articuloCategorias.Articulo = _contexto.Articulo.FirstOrDefault(c => c.Articulo_Id == id);
+
+            if (articuloCategorias == null)
+            {
+                return NotFound();
+            }
+
+            return View(articuloCategorias);
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Editar(Articulo Articulo)
+        public IActionResult Editar(ArticuloCategoriaVM articuloVM)
         {
             if (ModelState.IsValid)
             {
-                _contexto.Articulo.Update(Articulo);
-                _contexto.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                if (articuloVM.Articulo.Articulo_Id == 0)
+                {
+                    return View(articuloVM.Articulo);
+                }
+                else
+                {
+                    _contexto.Articulo.Update(articuloVM.Articulo);
+                    _contexto.SaveChanges();
+                    return RedirectToAction(nameof(Index));
+                }
             }
 
-            return View(Articulo);
+            return View(articuloVM.Articulo);
 
         }
 
         [HttpGet]
-        public IActionResult Borrar(int id)
+        public IActionResult Borrar(int? id)
         {
             var Articulo = _contexto.Articulo.FirstOrDefault(c => c.Articulo_Id == id);
             _contexto.Remove(Articulo);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XIEW1ZiExZTipDY0iFvCD0kOy2dfjPu25ClX/CKI/zHWmYbUspSKdE0XxLkx6aQM3qoMwo5/GrEwmz0udxXRwA==",
+  "dgSpecHash": "0DjsvGDkPCZpWVqvrI4efgEu++VKqfq5U+jAL6fRFDWccM0aNL8o+E2SvuSS79Sbt7O5RvN5WrAESyJNggnLFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\co_efgomezd\\source\\repos\\CursoEntityCore\\CursoEntityCore\\CursoEntityCore.csproj",
+  "projectFilePath": "C:\\Users\\co_efgomezd\\source\\repos\\EntityFrameworkCore7\\CursoEntityCore\\CursoEntityCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\co_efgomezd\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\co_efgomezd\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
