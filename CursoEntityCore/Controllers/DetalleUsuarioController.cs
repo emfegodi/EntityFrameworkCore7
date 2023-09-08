@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CursoEntityCore.Controllers
 {
-    public class ArticuloController : Controller
+    public class DetalleUsuarioController : Controller
     {
         public readonly ApplicationDbContext _contexto;
-        public ArticuloController(ApplicationDbContext contexto)
+        public DetalleUsuarioController(ApplicationDbContext contexto)
         {
             _contexto = contexto;
         }
